@@ -1,0 +1,21 @@
+.auth {
+
+
+  &__icon {
+    width: 14rem;
+    height: 14rem;
+    border-radius: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    //background: rgba(var(--dark), .3);
+    background: #28303d; //todo: поменять на переменную
+    img {
+      background: transparent;
+      width: 6.6rem;
+      object-fit: contain;
+    }
+  }
+}

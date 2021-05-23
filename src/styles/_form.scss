@@ -1,0 +1,88 @@
+.form {
+  input, textarea {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 15px;
+    font-weight: 300;
+
+    border-bottom: 1px solid var(--slate);
+    //.valid & {
+    //  box-shadow: 0 0 3px #f37575;
+    //}
+    &::placeholder {
+      color: #9f9f9f;
+      font-family: 'Ubuntu', sans-serif;
+    }
+
+    &:focus-visible {
+      transition: var(--transition);
+      outline: none;
+      border-color: var(--cool-blue);
+    }
+  }
+
+  //&__title {
+  //  color: #ff8663;
+  //  font-weight: 500;
+  //  margin: 5px 0;
+  //}
+  &__item {
+    display: flex;
+    margin: 10px 0;
+    position: relative;
+
+    //span {
+    //  position: absolute;
+    //  display: none;
+    //}
+
+
+    &._isValid::after, &._isInvalid::after {
+      content: "✓";
+      position: absolute;
+      font-size: 12px;
+      line-height: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 20px;
+      background: var(--cool-blue);
+      color: #fff;
+      border-radius: 100%;
+    }
+
+    &._isInvalid::after {
+      content: "x";
+      background: #d72c2cc7;
+    }
+    &._mb-20 {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__btn {
+
+    &._center {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  &__error {
+    font-size: 1.5rem;
+    color: var(--accent);
+    position: absolute;
+    top: -.5rem;
+    right: 0;
+  }
+  //&__textarea {
+  //  display: flex;
+  //  margin: 10px 0;
+  //
+  //  textarea {
+  //  }
+  //}
+}
